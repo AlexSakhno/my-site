@@ -1,7 +1,7 @@
 @font-face {
   font-family: "TTLakes";
   font-display: swap;
-  src: url("asserts/fonts/TTLakes-Bold.woff") format("woff"), url("asserts/fonts/TTLakes-Bold.woff2") format("woff2");
+  src: url("../asserts/fonts/TTLakes-Bold.woff") format("woff"), url("../asserts/fonts/TTLakes-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -9,8 +9,8 @@
 @font-face {
   font-family: "TTLakes";
   font-display: swap;
-  src: url("asserts/fonts/TTLakes-Medium.woff") format("woff"),
-    url("asserts/fonts/TTLakes-Medium.woff2") format("woff2");
+  src: url("../asserts/fonts/TTLakes-Medium.woff") format("woff"),
+    url("../asserts/fonts/TTLakes-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -18,8 +18,8 @@
 @font-face {
   font-family: "TTLakes";
   font-display: swap;
-  src: url("asserts/fonts/TTLakes-Regular.woff") format("woff"),
-    url("asserts/fonts/TTLakes-Regular.woff2") format("woff2");
+  src: url("../asserts/fonts/TTLakes-Regular.woff") format("woff"),
+    url("../asserts/fonts/TTLakes-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -72,36 +72,36 @@ body {
 
 .header-page__burger {
   border: none;
-  background: url("asserts/img/burger.svg") no-repeat;
+  background: url("../asserts/img/burger.svg") no-repeat;
   margin-right: 16px;
 }
 
 .header-page__logo {
   width: 100px;
   height: 52px;
-  background: url("asserts/img/logo.png") no-repeat;
+  background: url("../asserts/img/logo.png") no-repeat;
   position: relative;
 }
 
 .header-page__call {
   border: none;
-  background: url("asserts/img/call.svg") no-repeat;
+  background: url("../asserts/img/call.svg") no-repeat;
 }
 
 .header-page__chat {
   border: none;
-  background: url("asserts/img/chat.svg") no-repeat;
+  background: url("../asserts/img/chat.svg") no-repeat;
 }
 
 .header-page__profile {
   border: none;
-  background: url("asserts/img/profile.svg") no-repeat;
+  background: url("../asserts/img/profile.svg") no-repeat;
   padding-right: 54px;
 }
 
 .header-page__repair {
   border: none;
-  background: url("asserts/img/repair.svg") no-repeat;
+  background: url("../asserts/img/repair.svg") no-repeat;
   position: relative;
 }
 
@@ -117,7 +117,7 @@ body {
 
 .header-page__checkstatus {
   border: none;
-  background: url("asserts/img/checkstatus.svg") no-repeat;
+  background: url("../asserts/img/checkstatus.svg") no-repeat;
 }
 
 .main-page__content-block {
@@ -202,7 +202,7 @@ body {
 
 .main-page__read::before {
   content: "";
-  background: url("asserts/img/expand.svg") no-repeat;
+  background: url("../asserts/img/expand.svg") no-repeat;
   position: absolute;
   width: 24px;
   height: 24px;
@@ -340,7 +340,7 @@ body {
 
   .main-page__icon--repair--active::after {
     content: "";
-    background: url("asserts/img/repair.svg") no-repeat;
+    background: url("../asserts/img/repair.svg") no-repeat;
     width: 40px;
     height: 40px;
     position: absolute;
@@ -350,7 +350,7 @@ body {
 
   .main-page__icon--checkstatus--active::after {
     content: "";
-    background: url("asserts/img/checkstatus.svg") no-repeat;
+    background: url("../asserts/img/checkstatus.svg") no-repeat;
     height: 40px;
     width: 40px;
     position: absolute;
