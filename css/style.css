@@ -83,9 +83,6 @@ body {
   position: relative;
 }
 
-.header-page__link {
-}
-
 .header-page__call {
   border: none;
   background: url("asserts/img/call.svg") no-repeat;
