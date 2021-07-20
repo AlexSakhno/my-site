@@ -1,4 +1,22 @@
-let contentOpen = function () {
+const Slider = function () {
+    new Swiper(".swiper-container", {
+        loop: false,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 0,
+        grabCursor: true,
+        keyboard: {
+            enable: false,
+            onlyInViewport: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+}
+
+const contentOpen = function () {
     const brandContentButton = document.querySelector('.section__button');
     const brandContent = document.querySelector('.section__content');
     const brandImgButton = document.querySelector('.section__opening-img');
@@ -17,5 +35,4 @@ let contentOpen = function () {
 };
 
 contentOpen();
-
-
+Slider();

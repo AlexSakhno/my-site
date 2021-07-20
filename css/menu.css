@@ -116,7 +116,6 @@ body {
     position: absolute;
     left: -24px;
     top: -5px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .main-menu__link {
