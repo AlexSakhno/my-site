@@ -210,7 +210,23 @@ body {
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 425px) {
+    .section__header {
+        background: #f8f8f8;
+        padding: 16px 5px 16px 27px;
+    }
+
+    .section__item {
+        width: 240px;
+        margin-right: 16px;
+    }
+
+    .section__list {
+        margin-left: 32px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
     .section__content {
         display: none;
     }
