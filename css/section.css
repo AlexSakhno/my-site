@@ -98,8 +98,6 @@ body {
     border-radius: 6px;
     margin-right: 32px;
     margin-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 
 .section__link {
@@ -117,13 +115,17 @@ body {
     height: 40px;
     background: url("../asserts/img/go.svg") no-repeat;
     transition: transform 0.3s;
-    right: 0px;
+    right: 16px;
     content: "";
 }
 
 .section__link:hover::before {
     transform: scale(1.1);
     transition: transform 0.3s;
+}
+
+.section__logo {
+    margin-left: 16px;
 }
 
 /* Блок кнопки раскрытия контента страницы */
@@ -161,10 +163,11 @@ body {
 }
 
 /* Вспомогательные стили Слайдера */
+/*
 .section-slider {
     display: none;
 }
-
+*/
 .section-slider__link {
     display: inline-flex;
     width: 100%;
@@ -187,6 +190,10 @@ body {
 .section-slider__link:hover::before {
     transform: scale(1.1);
     transition: transform 0.3s;
+}
+
+.swiper-container--none {
+    display: none;
 }
 
 @media only screen and (max-width: 1119px) {
@@ -233,9 +240,5 @@ body {
 
     .section__opening {
         display: none;
-    }
-
-    .section-slider {
-        display: block;
     }
 }
