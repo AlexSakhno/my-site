@@ -1,36 +1,38 @@
-const enableSwiper = function () {
-    var mySwiper = undefined;
-    const swiperVisible = document.querySelector('.swiper-container');
-    function initSwiper() {
-        var screenWidth = window.innerWidth;
-        if ((screenWidth < (375)) && (mySwiper == undefined)) {
-            mySwiper = new Swiper('.swiper-container', {
-                loop: false,
-                slidesPerView: 'auto',
-                centeredSlides: true,
-                spaceBetween: 0,
-                grabCursor: true,
-                keyboard: {
-                    enable: false,
-                    onlyInViewport: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-            swiperVisible.classList.remove('swiper-container--none');
-        } else if ((screenWidth > 375) && (mySwiper != undefined)) {
-            mySwiper.destroy();
-            mySwiper = undefined;
-            swiperVisible.classList.add('swiper-container--none');
-        }
-    }
+const useSwiper = function () {
+    const breakpoint = window.matchMedia('(min-width:530px)');
 
-    window.addEventListener('resize', function () {
-        initSwiper();
-    });
-}();
+    let mySwiper;
+
+    const breakpointChecker = function () {
+        if (breakpoint.matches === true) {
+            if (mySwiper !== undefined) mySwiper.destroy(true, true);
+            return;
+        } else if (breakpoint.matches === false) {
+            return enableSwiper();
+        }
+    };
+
+    const enableSwiper = function () {
+        mySwiper = new Swiper('.swiper-container', {
+            loop: false,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 0,
+            grabCursor: true,
+            keyboard: {
+                enable: false,
+                onlyInViewport: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    };
+
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+};
 
 const contentUse = function () {
     const brandContentButton = document.querySelector('.section__button');
@@ -51,6 +53,5 @@ const contentUse = function () {
 
 };
 
-
-
 contentUse();
+useSwiper();
