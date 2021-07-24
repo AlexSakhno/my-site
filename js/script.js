@@ -39,15 +39,23 @@ const contentUse = function () {
     const brandImgButton = document.querySelector('.section__opening-img');
     const brandContent = document.querySelector('.section__content');
 
+    const addClass = function () {
+        brandContent.classList.add('section__content--open');
+        brandImgButton.classList.add('section__opening-img--reverse');
+        brandContentButton.textContent = 'Скрыть';
+    }
+
+    const removeClass = function () {
+        brandContent.classList.remove('section__content--open');
+        brandImgButton.classList.remove('section__opening-img--reverse');
+        brandContentButton.textContent = 'Показать все';
+    }
+
     brandContentButton.addEventListener('click', function () {
         if (brandContentButton.textContent === 'Показать все') {
-            brandContent.classList.add('section__content--open');
-            brandImgButton.classList.add('section__opening-img--reverse');
-            brandContentButton.textContent = 'Скрыть';
+            addClass();
         } else {
-            brandContent.classList.remove('section__content--open');
-            brandImgButton.classList.remove('section__opening-img--reverse');
-            brandContentButton.textContent = 'Показать все';
+            removeClass();
         }
     });
 
