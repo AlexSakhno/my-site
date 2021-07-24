@@ -163,11 +163,10 @@ body {
 }
 
 /* Вспомогательные стили Слайдера */
-/*
-.section-slider {
+.section-slider__container {
     display: none;
 }
-*/
+
 .section-slider__link {
     display: inline-flex;
     width: 100%;
@@ -190,10 +189,6 @@ body {
 .section-slider__link:hover::before {
     transform: scale(1.1);
     transition: transform 0.3s;
-}
-
-.swiper-container--none {
-    display: none;
 }
 
 @media only screen and (max-width: 1119px) {
@@ -233,12 +228,13 @@ body {
     }
 }
 
-@media only screen and (max-width: 375px) {
-    .section__content {
+@media only screen and (max-width: 530px) {
+    .section__content,
+    .section__opening {
         display: none;
     }
 
-    .section__opening {
-        display: none;
+    .section-slider__container {
+        display: block;
     }
 }
