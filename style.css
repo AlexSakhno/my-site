@@ -312,7 +312,8 @@ body {
   background-color: white;
   right: 0;
   top: 0;
-  z-index: 3; }
+  z-index: 3;
+  border-left: 3px solid #D9FFF5; }
   .order-call--hidden {
     right: 100%; }
   @media screen and (min-width: 1120px) {
@@ -429,7 +430,8 @@ body {
   background-color: white;
   right: 0;
   top: 0;
-  z-index: 3; }
+  z-index: 3;
+  border-left: 3px solid #D9FFF5; }
   .feedback-form--hidden {
     right: 100%; }
   @media screen and (min-width: 1120px) {
