@@ -313,7 +313,7 @@ body {
   right: 0;
   top: 0;
   z-index: 3;
-  border-left: 3px solid #D9FFF5; }
+  border-left: 3px solid #d9fff5; }
   .order-call--hidden {
     right: 100%; }
   @media screen and (min-width: 1120px) {
@@ -336,6 +336,7 @@ body {
         left: -64px;
         margin-left: 0; } }
   .order-call__title {
+    position: relative;
     display: block;
     font-size: 24px;
     line-height: 32px;
@@ -345,10 +346,26 @@ body {
     margin-top: 40px;
     margin-left: 16px;
     text-align: left; }
+    .order-call__title::before {
+      content: "";
+      width: 3px;
+      height: 40px;
+      background-color: #41f6d7;
+      position: absolute;
+      left: -18px;
+      top: -5px; }
     @media screen and (min-width: 1120px) {
       .order-call__title {
         width: 376px;
-        margin-left: 32px; } }
+        margin-left: 32px; }
+        .order-call__title::before {
+          content: "";
+          width: 3px;
+          height: 40px;
+          background-color: #41f6d7;
+          position: absolute;
+          left: -35px;
+          top: -5px; } }
   .order-call__tel {
     width: 288px;
     height: 48px;
@@ -449,6 +466,7 @@ body {
         left: -64px;
         margin-left: 0; } }
   .feedback-form__title {
+    position: relative;
     display: block;
     font-size: 24px;
     line-height: 32px;
@@ -457,10 +475,26 @@ body {
     font-weight: 700;
     margin: 40px auto 24px 16px;
     text-align: left; }
+    .feedback-form__title::before {
+      content: "";
+      width: 3px;
+      height: 40px;
+      background-color: #41f6d7;
+      position: absolute;
+      left: -18px;
+      top: -5px; }
     @media screen and (min-width: 1120px) {
       .feedback-form__title {
         width: 376px;
-        margin-left: 32px; } }
+        margin-left: 32px; }
+        .feedback-form__title::before {
+          content: "";
+          width: 3px;
+          height: 40px;
+          background-color: #41f6d7;
+          position: absolute;
+          left: -35px;
+          top: -5px; } }
   .feedback-form__form > input {
     width: 288px;
     height: 48px;
