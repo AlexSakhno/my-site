@@ -1,0 +1,244 @@
+.main-page {
+  &__content-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 24px auto;
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 24px 16px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.2px;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__header::before {
+    content: "";
+    width: 2px;
+    height: 40px;
+    background-color: $bgBefore;
+    position: absolute;
+    top: 24px;
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 16px;
+    margin-top: 10px;
+    overflow: auto;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 40px;
+      right: 0;
+      background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7e7e82;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    white-space: nowrap;
+    padding: 8px 9px 8px 16px;
+    cursor: pointer;
+  }
+
+  &__item--active {
+    background-color: #ffffff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+    padding: 6px 7px 6px 14px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    margin: 24px 16px 0 16px;
+  }
+
+  &__all-text {
+    display: inline-block;
+    max-height: 90px;
+    overflow: hidden;
+
+    &--open {
+      max-height: 100%;
+      transition: max-height 0.5s;
+    }
+  }
+
+  &__read {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    padding-left: 32px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &__read::before {
+    content: "";
+    background: $bgIconExpand;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+  }
+
+  &__read--reverse::before {
+    content: "";
+    background: $bgIconExpand;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+  }
+
+  &__img-content {
+    width: 100%;
+    height: 100%;
+    margin-top: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: $bgColor;
+    font-size: 16px;
+    font-weight: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    position: relative;
+    margin-right: 24px;
+    padding-right: 48px;
+    float: right;
+    top: 52px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #7e7e82;
+
+    }
+    transition: 0.3s;
+  }
+
+  &__button-img {
+    margin-left: 5px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    &__content-block {
+      max-width: 1120px;
+      margin: 0 auto 32px auto;
+    }
+
+    &__title {
+      margin: 25px 24px;
+    }
+
+    &__menu {
+      margin-left: 22px;
+    }
+
+    &__content {
+      display: flex;
+    }
+
+    &__text {
+      line-height: 20px;
+      margin: 24px 48px 10px 22px;
+    }
+
+    &__all-text {
+      max-height: 160px;
+
+      &--open {
+        max-height: 100%;
+      }
+      transition: max-height 0.5s;
+    }
+
+    &__img-content {
+      width: 360px;
+      height: 208px;
+    }
+  }
+
+  @media only screen and (max-width: 1119px) {
+    &__button {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &__menu {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media only screen and (min-width: 1120px) {
+    &__content-block {
+      margin: 0 auto 51px auto;
+    }
+
+    &__title {
+      margin: 42px 0 8px 32px;
+    }
+
+    &__header::before {
+      content: "";
+      width: 2px;
+      height: 40px;
+      background-color: $bgBefore;
+      position: absolute;
+      top: 42px;
+    }
+
+    &__menu {
+      margin-left: 32px;
+    }
+
+    &__link {
+      padding: 8px 21px 8px 22px;
+    }
+
+    &__text {
+      margin: 24px 36px 13px 34px;
+    }
+
+    &__img-content {
+      width: 531px;
+      height: 307px;
+    }
+
+  }
+}

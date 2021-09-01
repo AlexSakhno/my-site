@@ -1,0 +1,185 @@
+.icon {
+  transform: scale(1);
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+}
+
+.order-call {
+  position: fixed;
+  width: 320px;
+  height: 100vh;
+  background-color: rgba($color: #fff, $alpha: 1);
+  right: 0;
+  top: 0;
+  z-index: 3;
+  border-left: 3px solid #d9fff5;
+  &--hidden {
+    right: 100%;
+  }
+
+  @media screen and (min-width: 1120px) {
+    width: 440px;
+  }
+
+  &__modal {
+    width: 304px;
+    height: 264px;
+    margin-top: 24px;
+
+    @media screen and (min-width: 1120px) {
+      position: relative;
+      margin-top: 0;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #eaeaea;
+    }
+  }
+
+  &__button {
+    &--close {
+      @extend %icon_button;
+      background: $bgIconClose;
+      margin-left: 16px;
+
+      @media screen and (min-width: 1120px) {
+        position: absolute;
+        left: -64px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1b1c21;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-left: 16px;
+    text-align: left;
+    &::before {
+      content: "";
+      width: 3px;
+      height: 40px;
+      background-color: $bgBefore;
+      position: absolute;
+      left: -18px;
+      top: -5px;
+    }
+    @media screen and (min-width: 1120px) {
+      width: 376px;
+      margin-left: 32px;
+      &::before {
+        content: "";
+        width: 3px;
+        height: 40px;
+        background-color: $bgBefore;
+        position: absolute;
+        left: -35px;
+        top: -5px;
+      }
+    }
+  }
+
+  &__tel {
+    width: 288px;
+    height: 48px;
+    margin: 24px 16px 16px 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding-left: 16px;
+    &::-webkit-input-placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #b5b6bc;
+    }
+    &::-moz-placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #b5b6bc;
+    }
+    &:-ms-input-placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #b5b6bc;
+    }
+    &::-ms-input-placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #b5b6bc;
+    }
+    &::placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #b5b6bc;
+    }
+    @media screen and (min-width: 1120px) {
+      width: 376px;
+      margin: 24px 16px 16px 32px;
+    }
+  }
+
+  &__police {
+    width: 288px;
+    line-height: 16px;
+    color: #7e7e82;
+
+    display: inline-block;
+    margin-left: 16px;
+    @media screen and (min-width: 1120px) {
+      width: 376px;
+      margin-left: 32px;
+    }
+  }
+
+  &__link {
+    color: #ff3e79;
+  }
+
+  &__button-submit {
+    position: relative;
+    transform: translateX(170px);
+    margin-top: 16px;
+    width: 136px;
+    height: 32px;
+    background-color: $bgButton;
+    border-radius: 16px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    font-weight: 700;
+
+    &::before {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: $bgIconGoside;
+      right: 5px;
+      content: "";
+    }
+
+    &:focus {
+      font-size: 15px;      
+    }
+
+    transition: 0.3s;
+    
+    @media screen and (min-width: 1120px) {
+      transform: translateX(270px);
+    }
+  }
+}
