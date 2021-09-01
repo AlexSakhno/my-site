@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebCore - Aleksandr Sakhno</title>
-    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link href="style.css" rel="stylesheet"></head>
@@ -77,7 +76,7 @@
 
             <span class="order-call__title"> Заказать звонок </span>
 
-            <input type="tel" name="tel" id="tel" class="order-call__tel" placeholder="Телефон" required>
+            <input type="tel" name="tel" id="tel" class="order-call__tel" placeholder="Телефон" autocomplete="off" required>
             <p class="order-call__police">
               Нажимая “отправить”, вы даете согласие на <a href="#" class="order-call__link">обработку персональных данных</a>
               и соглашаетесь с нашей
@@ -95,19 +94,20 @@
 
             <span class="feedback-form__title"> Обратная связь </span>
             <form action="" method="post" name="feedback" class="feedback-form__form">
-              <input type="text" name="name" class="feedback-form__name" placeholder="Имя">
-              <input type="tel" name="tel" class="feedback-form__tel" placeholder="Телефон" required>
-              <input type="email" name="email" class="feedback-form__email" placeholder="Электронная почта" required>
-              <textarea name="message" class="feedback-form__message" rows="10" placeholder="Сообщение"></textarea>
+              <input tabindex="1" type="text" name="name" class="feedback-form__name" placeholder="Имя" autocomplete="off" autofocus>
+              <input tabindex="2" type="tel" name="tel" class="feedback-form__tel" placeholder="Телефон" autocomplete="off" required>
+              <input tabindex="3" type="email" name="email" class="feedback-form__email" placeholder="Электронная почта" autocomplete="off" required>
+              <textarea tabindex="4" name="message" class="feedback-form__message" rows="10" placeholder="Сообщение" autocomplete="off"></textarea>
+              <p class="feedback-form__police">
+                Нажимая “отправить”, вы даете согласие на <a href="#" class="feedback-form__link">обработку персональных данных</a>
+                и соглашаетесь с нашей
+                <a href="#" class="feedback-form__link">политикой конфиденциальности</a>
+              </p>
+              <button type="submit" class="feedback-form__button-submit" tabindex="5">
+                Отправить
+              </button>
             </form>
-            <p class="feedback-form__police">
-              Нажимая “отправить”, вы даете согласие на <a href="#" class="feedback-form__link">обработку персональных данных</a>
-              и соглашаетесь с нашей
-              <a href="#" class="feedback-form__link">политикой конфиденциальности</a>
-            </p>
-            <button type="submit" class="feedback-form__button-submit">
-              Отправить
-            </button>
+
           </div>
         </section>
       </div>
@@ -135,11 +135,13 @@
           <article class="main-page__content-block">
             <header class="main-page__header">
               <h1 class="main-page__title">Услуги и сервисы</h1>
-              <button type="button" class="main-page__button main-page__icon--repair--active">
+              <button type="button" class="main-page__button">
                 Оставить заявку
+                <img src="img/icon/checkstatus.svg" class="main-page__button-img" alt="">
               </button>
-              <button type="button" class="main-page__button main-page__icon--checkstatus--active">
+              <button type="button" class="main-page__button">
                 Статус ремонта
+                <img src="img/icon/checkstatus.svg" class="main-page__button-img" alt="">
               </button>
               <nav class="main-page__menu">
                 <button type="button" class="main-page__item main-page__item--active">
@@ -254,8 +256,8 @@
                 Показать все
               </button>
             </div>
-            <div class="brand-slider__container swiper-container">
-              <div class="brand-slider__wrapper swiper-wrapper">
+            <div class="swiper-container brand-slider__container">
+              <div class="swiper-wrapper brand-slider__wrapper">
                 <div class="brand-slider__slide swiper-slide">
                   <a href="#" class="brand-slider__link">
                     <img class="brand-slider__logo" src="img/images/brand/lenovo.png">
@@ -312,10 +314,10 @@
                   </a>
                 </div>
               </div>
-              <div class="brand-slider__pagination swiper-pagination"></div>
+              <div class="swiper-pagination brand-slider__pagination"></div>
             </div>
           </section>
-
+         
           <section class="section-technic">
             <header class="section-technic__header">
               <h2 class="section-technic__title">
@@ -506,8 +508,8 @@
                 </ul>
               </div>
             </div>
-            <div class="price-slider__container swiper-container">
-              <div class="price-slider__wrapper swiper-wrapper">
+            <div class="swiper-container price-slider__container">
+              <div class="swiper-wrapper price-slider__wrapper">
                 <div class="price-slider__slide swiper-slide">
                   <a href="#" class="price-slider__link">
                     <div class="price-slider__service">
@@ -599,7 +601,7 @@
                   </a>
                 </div>
               </div>
-              <div class="price-slider__pagination swiper-pagination"></div>
+            <div class="swiper-pagination price-slider__pagination"></div>
             </div>
             <div class="section-price__note">
               <p class="section-price__descr">
@@ -637,7 +639,7 @@
         </footer>
       </div>
     </div>
-    <script type="text/javascript" src="./js/bundle.js"></script>
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="./js/bundle.js"></script></body>
